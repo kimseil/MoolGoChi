@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212199551260548228}
   - component: {fileID: 114241226618198760}
   - component: {fileID: 61146114394916942}
+  - component: {fileID: 50951443351336434}
   m_Layer: 0
   m_Name: fish3
-  m_TagString: Untagged
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,11 +38,31 @@ Transform:
   m_GameObject: {fileID: 1160215170873336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.91, y: -0.07, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50951443351336434
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160215170873336}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61146114394916942
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -79,11 +100,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishState: 0
+  egg: {fileID: 1016565736146312, guid: 8a207b07e992e4b6687e7812cdb7870e, type: 2}
+  explosion: {fileID: 1353604685770974, guid: f76c1c8f30fe84a95b7c8c1c305f4bab, type: 2}
   idleImage:
-  - {fileID: 21300000, guid: 8ab6a24a5fedec84b894b8a5f1f701cf, type: 3}
-  - {fileID: 21300000, guid: 422725ef29f5c5543a0b455d4af9f0da, type: 3}
-  - {fileID: 21300000, guid: bd2fdcf9eccd73f4db3f64bbd313ce19, type: 3}
+  - {fileID: 21300000, guid: a898cb8d73f6b2f4195ff64ae827b84f, type: 3}
+  - {fileID: 21300000, guid: d1c0dcb68b85c8f48bf5c40d04a1b2c1, type: 3}
+  - {fileID: 21300000, guid: 6d37e8115b519244da712517ea29cd06, type: 3}
   dieImage: {fileID: 21300000, guid: dd3dd827e21ef9946b227ae81cf0d9fb, type: 3}
+  fishType: 3
+  maxFood: 600
+  consumeFood: 30
+  maxExp: 2100
+  eggValue: 13
+  eggTimer: 3
 --- !u!212 &212199551260548228
 SpriteRenderer:
   m_ObjectHideFlags: 1

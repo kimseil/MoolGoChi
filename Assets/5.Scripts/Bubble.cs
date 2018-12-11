@@ -7,9 +7,15 @@ public class Bubble : MonoBehaviour {
     private float timer;
     private float speed;
 
+    private Rigidbody2D rigidBody2D;
+
 	// Use this for initialization
 	void Start () {
         speed = Random.Range(2f, 4);
+        rigidBody2D = gameObject.GetComponent<Rigidbody2D>();
+
+        rigidBody2D.velocity = new Vector2(0.5f, speed);
+        InvokeRepeating("BubbleMove", 0.3f, 0.3f);
     }
 
     private void Awake()
@@ -18,25 +24,13 @@ public class Bubble : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
-        gameObject.transform.Translate(new Vector3(0, speed * Time.deltaTime, 0));
-
-        if(timer < 0.3f)
-        {
-            gameObject.transform.Translate(new Vector3(0.5f * Time.deltaTime, 0, 0));
-        } else
-        {
-            gameObject.transform.Translate(new Vector3(-0.5f * Time.deltaTime, 0, 0));
-            if (timer > 0.6f)
-            {
-                timer = 0;
-            }
-        }
-
-        timer += Time.deltaTime;
-
+    void FixedUpdate () {
         Vector3 pos = Camera.main.WorldToViewportPoint(gameObject.transform.position);
 
         if (pos.y > 1f) Destroy(gameObject);
+    }
+
+    private void BubbleMove() {
+        rigidBody2D.velocity = new Vector2(rigidBody2D.velocity.x * -1, speed);
     }
 }

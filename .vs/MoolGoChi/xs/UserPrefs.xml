@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{CC6282A2-0346-D412-CF2E-0513F31A4BAD}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/5.Scripts/Fish.cs">
+    <Files>
+      <File FileName="Assets/5.Scripts/Fish.cs" Line="39" Column="18" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

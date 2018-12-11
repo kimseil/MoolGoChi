@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Background
+  - Fish
+  - Feed
+  - Bubble
+  - Egg
+  - UI
   layers:
   - Default
   - TransparentFX
